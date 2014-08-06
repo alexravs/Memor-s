@@ -1,4 +1,9 @@
 <div class="jumbotron">
 	<h1>Welcome to Memorÿs</h1>
-	Click here to <%= link_to "find out more", "#", class: "btn btn-primary" %>
+	 <% if user_signed_in? %>
+          # do something
+     <% else %>
+		Click here to <%= link_to "find out more", new_user_session_path, class: "btn btn-primary" %>        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+	<% end %> 
+
 </div>
